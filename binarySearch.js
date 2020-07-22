@@ -1,11 +1,13 @@
 // function takes a list of arrays and the item to search for as arguments.
 function binary_Search(list, item){
+  
   // established the far left end and right end of the array.
   let left = 0
   let right = list.length - 1
   
   // keeps running until item is found while left or right is shrinking in half.
   while (left <= right) {
+    
     // takes the left and right end divided by 2 to come up with the midpoint.
     // the mid position is used to "guess."
     let mid = Math.floor((left + right) / 2)
