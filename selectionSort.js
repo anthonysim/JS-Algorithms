@@ -7,6 +7,7 @@ function swap(array, i, j) {
 function selectionSort(array, callback) {
   for(var i = 0; i < array.length; i++) {
     var min = i;
+    
     for(var j = i + 1; j < array.length; j++) {
       if(array[j] < array[min]) {
         min = j;
