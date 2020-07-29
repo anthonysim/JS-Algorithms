@@ -13,7 +13,9 @@ function selectionSort(array, callback) {
       }
     }
 
+    if (i !== min) {
     callback(array, i, min);
+    }
   }
   return array;
 }
