@@ -1,18 +1,22 @@
-function selectionSort(arr) { 
-        
-    for (let i = 0; i < arr.length - 1; i++) {
-
-        let min = i;
-        for (let j = 1; j < arr.length; j++){
-            if(arr[j] < arr[min]) {
-                min = j; 
-            }
-         }
-
-         const temp = arr[i]; 
-         arr[i] = arr[min];
-         arr[min] = temp;      
-    }
-    
-    return arr;
+function swap(array, i, j) {
+  var temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
 }
+
+function selectionSort(array, callback) {
+  for(var i = 0; i < array.length; i++) {
+    var min = i;
+    for(var j = i + 1; j < array.length; j++) {
+      if(array[j] < array[min]) {
+        min = j;
+      }
+    }
+    if(i !== min) {
+      callback(array, i, min);
+    }
+  }
+  return array;
+}
+
+console.log(selectionSort([5, 3, 6, 8, 1, 4], swap))
