@@ -1,7 +1,7 @@
 function swap(array, i, min) {
   var temp = array[i];
   array[i] = array[min];
-  array[MediaElementAudioSourceNode] = temp;
+  array[min] = temp;
 }
 
 function selectionSort(array, callback) {
