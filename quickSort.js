@@ -3,11 +3,11 @@ function quickSort(array) {
     return array;
   }
 
-  var pivot = array[0];
-  var lesser = [];
-  var greater = [];
+  let pivot = array[0];
+  let lesser = [];
+  let greater = [];
 
-  for(var i = 1; i < array.length; i++) {
+  for(let i = 1; i < array.length; i++) {
     if(array[i] < pivot) {
       lesser.push(array[i]);
     } else {
