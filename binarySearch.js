@@ -20,12 +20,12 @@ function binary_Search(list, item){
     
     // if the guess is higher than the item, it will subtract 1 from mid and estabish the new right.
     if (guess > item) {
-      right = mid + 1
+      right = mid - 1
     }
     
     // if the guess is lower than the item, it will subtract 1 from mid and estabish the new left.
     else {
-      left = mid - 1
+      left = mid + 1
     }
   }
   // return message if nothing is found. 
