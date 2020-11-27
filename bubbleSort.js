@@ -1,18 +1,37 @@
-function bubbleSort(arr){
-  var noSwaps;
-  for(var i = arr.length; i > 0; i--){
-    noSwaps = true;
-    for(var j = 0; j < i - 1; j++){
-      if(arr[j] > arr[j+1]){
-        var temp = arr[j];
-        arr[j] = arr[j+1];
-        arr[j+1] = temp;
-        noSwaps = false;         
-      }
-    }
-    if(noSwaps) break;
-  }
-  return arr;
-}
+// Goal: make an unassorted array, sorted.
 
-bubbleSort([8,1,2,3,4,5,6,7]);
+// O: a sorted array
+// I: an unsorted array
+// C: none
+// E: empty array, an array with one num
+
+var bubbleSort = function(arr) {
+    if (arr === [] || arr.length === 1) {
+      return arr;
+  }
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        let swapped = true;
+
+        for (let j = 0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j + 1];
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
+                
+                swapped = false;
+            }
+            
+          if (swapped) {
+            return arr;
+          }
+        }      
+    }
+    return arr;
+};
+
+// Test Cases
+console.log(bubbleSort([1, 2, 3, 4]))
+console.log(bubbleSort([2, 1, 3])); // yields [1, 2, 3]
+console.log(bubbleSort([ -10, -10.1, 2, 4, 20, 299 ]));
+
