@@ -1,13 +1,21 @@
-function insertionSort(arr){
-	var currentVal;
-    for(var i = 1; i < arr.length; i++){
-        currentVal = arr[i];
-        for(var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
-            arr[j+1] = arr[j]
-        }
-        arr[j+1] = currentVal;
+const insertionSort = function(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let temp = arr[i]
+    let position = i - 1;
+    
+    while (position >= 0) {
+      if (arr[position] > temp) {
+        arr[position + 1] = arr[position];
+        position = position - 1;
+        
+      } else {
+        break;
+      }
+       arr[position + 1] = temp;
     }
-    return arr;
+  }
+  return arr
 }
 
-insertionSort([2,1,9,76,4])
+
+console.log(insertionSort([2, 1, 9, 76, 4]))
