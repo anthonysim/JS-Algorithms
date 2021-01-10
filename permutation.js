@@ -29,7 +29,6 @@ let permutates = arr => {
   };
 
   generate(arr.length, arr.split(''));
-
   return output;
 };
 
