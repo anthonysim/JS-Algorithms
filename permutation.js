@@ -4,8 +4,8 @@ let permutates = arr => {
 
   const output = [];
 
-  const swapInPlace = (arr, indexA, indexB) => {
-    [arr[indexA], arr[indexB]] = [arr[indexB], arr[indexA]]
+  const swapInPlace = (arr, i, j) => {
+    [ arr[i], arr[j] ] = [ arr[i], arr[j] ]
     return arr
   };
 
