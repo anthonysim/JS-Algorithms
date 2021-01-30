@@ -11,7 +11,7 @@ function binary_Search(list, item){
     // takes the left and right end divided by 2 to come up with the midpoint.
     // the mid position is used to "guess."
     let mid = Math.floor((left + right) / 2)
-    guess = list[mid]
+    let guess = list[mid]
 
     // if the guess is right, it will return the position
     if (guess === item) {
