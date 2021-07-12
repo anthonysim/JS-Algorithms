@@ -1,5 +1,4 @@
 function avgOfSubArrays(K, arr) {
-  
   const result = [];
   let windowSum = 0;
   let windowStart = 0;
