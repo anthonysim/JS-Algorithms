@@ -11,7 +11,6 @@ const max_sub_array_of_size_k = function(k, arr) {
 
     if (i >= k - 1) {
       max = Math.max(max, currentTotal);
-      console.log(max)
       currentTotal -= arr[point];
       point += 1;
     }
