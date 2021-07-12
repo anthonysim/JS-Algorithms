@@ -1,11 +1,11 @@
 function maxSubarraySum(arr, num){
-    if (arr.length < num) return null;
- 
+    if (arr.length < num) {
+        return null;
+    }
     let total = 0;
 
     for (let i = 0; i < num; i++){
-       total += arr[i];
-       
+       total += arr[i]; 
     }
     let currentTotal = total;
     
