@@ -24,4 +24,4 @@ const longest_substring_with_k_distinct = (str, k) => {
   return longest;
 };
 
-console.log(longest_substring_with_k_distinct("araaci", 2));
+console.log(longest_substring_with_k_distinct("araaci", 2)); // 4
