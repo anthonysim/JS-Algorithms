@@ -1,11 +1,11 @@
 const dfs = function(root) {
     let results = [];
     function traverse(node) {
-
+        results.push(node.val);
+        
         if (node.left) {
             traverse(node.left);
         }
-        results.push(node.val)
         if (node.right) {
             traverse(node.right);
         }
