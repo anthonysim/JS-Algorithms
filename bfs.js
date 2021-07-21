@@ -1,4 +1,4 @@
-var averageOfLevels = function(root) {
+const bfs = function(root) {
     if (root === null) {
         return null;
     }
@@ -22,7 +22,7 @@ var averageOfLevels = function(root) {
 
 
 
-function TreeNode(val, left, right) {
+function bfs(val, left, right) {
      this.val = (val===undefined ? 0 : val)
      this.left = (left===undefined ? null : left)
      this.right = (right===undefined ? null : right)
