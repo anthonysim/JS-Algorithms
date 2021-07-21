@@ -1,4 +1,8 @@
 var averageOfLevels = function(root) {
+    if (root === null) {
+        return null;
+    }
+        
     const arr = [root]
     const results = []
     
